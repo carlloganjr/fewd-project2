@@ -29,8 +29,8 @@ h2 {
 h3 {
   font-family: 'Lato', sans-serif;
   font-weight: 700;
-  font-size: 1.5em;
-  margin-bottom: -8px;
+  font-size: 1.35em;
+  padding-top: 10px;
 }
 
 p {
@@ -44,8 +44,31 @@ a {
   text-decoration: none;
 }
 
+footer {
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f6f6f6;
+  text-align: left;
+  border-top: 1px solid lightgrey;
+  padding: 25px 0;
+}
 
-/**************** CLASS STYLES ****************/
+footer h2 {
+  margin-top: 0;
+  display: inline;
+  margin-left: 5%;
+  margin-right: 38%
+}
+
+footer a {
+  color: inherit;
+}
+
+footer a:visited {
+  color: grey;
+}
+
+/**************** LAYOUT STYLES ****************/
 
 .top-div {
   background-color: #f6f6f6;
@@ -54,16 +77,17 @@ a {
 }
 
 .profile-image {
-  max-width: 60%;
+  max-width: 65%;
   margin-top: 2em;
   margin-bottom: 7px;
 }
 
-.profile-para {
+.profile-para,
+.contact-div p {
   width: 90%;
   margin-left: 5%;
   margin-right: 5%;
-  font-size: 1.2em;
+  font-size: 1.125em;
 }
 
 .main-nav li,
@@ -101,27 +125,52 @@ a {
   background-color: white;
 }
 
-.portfolio-div {
+.portfolio-div p {
+  margin-bottom: 2.5em;
+  margin-left: 7.5%;
+  margin-right: 7.5%;
+}
+
+.image {
   max-width: 90%;
   margin-left: 5%;
   margin-right: 5%;
 }
 
-.portfolio-div p {
-  margin-bottom: 2.5em;
-}
-
-.image {
-  max-width: 100%;
-}
-
 .design-div {
-  max-width: 70%;
-  margin: 0 15%;
+  max-width: 100%;
+  margin: 0;
+  padding: 50px 5%;
+  background-color: lightgrey;
 }
 
 .design-div li{
   text-align: left;
   font-family: 'Lato', sans-serif;
   font-weight: 400;
+}
+
+.design-div ul {
+  padding-left: 5%;
+}
+
+.contact-div {
+  background-color: #f6f6f6;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.contact-div li {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.125em;
+}
+
+.contact-div a {
+  font-weight: 700;
+  padding-left: .5em;
+  line-height: 2.25em;
+  color: inherit;
+}
+
+.contact-div a:hover {
+  color: grey;
 }
