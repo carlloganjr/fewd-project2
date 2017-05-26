@@ -295,10 +295,14 @@ button::-moz-focus-inner,
 
 
 /**
- * Remove the nav ul left padding in Firefox.
+ * Remove the nav ul and ul left padding in Firefox.
  */
 
 nav ul {
+  padding-left: 0px;
+}
+
+ul {
   padding-left: 0px;
 }
 

@@ -7,6 +7,7 @@
 
 body {
   text-align: center;
+  background-color: #f6f6f6;
 }
 
 h1 {
@@ -21,22 +22,54 @@ nav {
   font-family: 'Roboto', sans-serif;
 }
 
+nav a {
+  display: block;
+  text-align: center;
+  padding-top: .8em;
+  padding-bottom: .8em;
+  background-color: white;
+  color: black;
+}
+
+nav a:visited {
+  color: grey;
+}
+
+nav a:hover {
+  background-color: grey;
+  color: white;
+}
+
+nav {
+  max-width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+nav li {
+  list-style: none;
+  margin-top: .5em;
+  margin-bottom: .5em;
+  background-color: white;
+}
+
 h2 {
-  font-size: 1.05em;
+  font-size: 1em;
   margin-bottom: 50px;
+  margin-top: 0;
 }
 
 h3 {
   font-family: 'Lato', sans-serif;
   font-weight: 700;
-  font-size: 1.35em;
+  font-size: 1.25em;
   padding-top: 10px;
 }
 
 p {
   font-family: 'Lato', sans-serif;
   font-weight: 400;
-  font-size: 1.125em;
+  font-size: 1em;
   line-height: 1.5em;
 }
 
@@ -45,7 +78,8 @@ a {
 }
 
 footer {
-  width: 100%;
+  width: 90%;
+  margin: 0 5%;
   font-family: 'Roboto', sans-serif;
   background-color: #f6f6f6;
   text-align: left;
@@ -56,16 +90,19 @@ footer {
 footer h2 {
   margin-top: 0;
   display: inline;
-  margin-left: 5%;
-  margin-right: 38%
+  margin-right: calc(100% - 190px);
 }
 
 footer a {
-  color: inherit;
+  color: black;
 }
 
 footer a:visited {
   color: grey;
+}
+
+footer a:hover {
+  color: darkgrey;
 }
 
 /**************** LAYOUT STYLES ****************/
@@ -73,7 +110,6 @@ footer a:visited {
 .top-div {
   background-color: #f6f6f6;
   padding-bottom: 25px;
-  margin-bottom: 50px;
 }
 
 .profile-image {
@@ -87,42 +123,16 @@ footer a:visited {
   width: 90%;
   margin-left: 5%;
   margin-right: 5%;
-  font-size: 1.125em;
+  font-size: 1.05em;
 }
 
-.main-nav li,
 .contact-div li {
   list-style: none;
 }
 
-.main-nav a {
-  display: block;
-  text-align: center;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  background-color: lightgrey;
-  color: lightslategrey;
-}
-
-.main-nav a:visited {
-  color: midnightblue;
-}
-
-.main-nav a:hover {
-  background-color: lightslategrey;
-  color: lightgrey;
-}
-
-.main-nav {
-  max-width: 90%;
-  margin-left: 5%;
-  margin-right: 5%;
-}
-
-.main-nav li {
-  margin-top: .5em;
-  margin-bottom: .5em;
-  background-color: white;
+.portfolio-div {
+  background-color: azure;
+  padding: 50px 0 35px 0;
 }
 
 .portfolio-div p {
@@ -141,7 +151,7 @@ footer a:visited {
   max-width: 100%;
   margin: 0;
   padding: 50px 5%;
-  background-color: lightgrey;
+  background-color: #ccffff;
 }
 
 .design-div li{
@@ -173,4 +183,104 @@ footer a:visited {
 
 .contact-div a:hover {
   color: grey;
+}
+
+/***********************************
+          768px MEDIA QUERY
+************************************/
+
+@media (min-width: 768px) {
+
+/****** 768px MEDIA QUERY - ELEMENT LAYOUT ******/
+
+header {
+  padding-top: 40px;
+}
+
+nav a {
+  background-color: #f6f6f6;
+  text-align: center;
+  padding: 5px;
+  color: black;
+  font-size: 1.125em;
+}
+
+nav li {
+  display: inline-block;
+  padding: 0 15px;
+  background-color: #f6f6f6;
+}
+
+nav {
+  margin-bottom: 50px;
+}
+
+/****** 768px MEDIA QUERY - CLASS LAYOUT ******/
+
+.top-div {
+  padding-bottom: 50px;
+}
+
+.profile-image {
+  max-width: 100%;
+  margin: 0;
+}
+
+.profile-pic {
+  float: right;
+  width: 40%;
+  margin-right: 25px;
+}
+
+.profile-para {
+  width: calc(100vw - 40% - 50px);
+  text-align: left;
+  font-size: 1.4em;
+  margin: 0 25px;
+  padding-right: 10px;
+}
+
+.profile-para p {
+  margin-top: -10px;
+}
+
+.image {
+  width: 100%;
+  margin: 0;
+}
+
+.left,
+.right {
+  float: left;
+  width: 50%;
+}
+
+.left img {
+  margin-left: 7.5%;
+}
+
+.right img {
+  margin-right: 7.5%;
+}
+
+.portfolio-div p {
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 1.1875em;
+}
+
+.design-div {
+  clear: both;
+}
+
+/****** 768px MEDIA QUERY - CLEARFIX ******/
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+
 }
