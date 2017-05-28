@@ -1,7 +1,7 @@
 
-/** {
+* {
     box-sizing: border-box;
-}*/
+}
 
 /**************** ELEMENT STYLES ****************/
 
@@ -48,8 +48,9 @@ nav {
 
 nav li {
   list-style: none;
-  margin-top: 3px;
-  margin-bottom: 3px;
+  margin-top: .5em;
+  margin-bottom: .5em;
+  background-color: white;
 }
 
 h2 {
@@ -58,15 +59,20 @@ h2 {
   margin-top: 0;
 }
 
-h3 {
+p,
+h3,
+.process-div li,
+.contact-div li {
   font-family: 'Lato', sans-serif;
+}
+
+h3 {
   font-weight: 700;
   font-size: 1.25em;
   padding-top: 10px;
 }
 
 p {
-  font-family: 'Lato', sans-serif;
   font-weight: 400;
   font-size: 1em;
   line-height: 1.5em;
@@ -81,6 +87,7 @@ footer {
   margin: 0 5%;
   font-family: 'Roboto', sans-serif;
   background-color: #f6f6f6;
+  text-align: left;
   border-top: 1px solid lightgrey;
   padding: 25px 0;
 }
@@ -104,14 +111,8 @@ footer a:hover {
   padding-bottom: 25px;
 }
 
-h1,
-.main-nav {
-  display: flex;
-  flex-direction: column;
-}
-
 .profile-image {
-  max-width: 65%;
+  width: 65%;
   margin-top: 2em;
   margin-bottom: 7px;
 }
@@ -121,6 +122,9 @@ h1,
   width: 90%;
   margin-left: 5%;
   margin-right: 5%;
+}
+
+.f-size {
   font-size: 1.05em;
 }
 
@@ -152,9 +156,8 @@ h1,
   background-color: #ccffff;
 }
 
-.process-div li{
+.process-div li {
   text-align: left;
-  font-family: 'Lato', sans-serif;
   font-weight: 400;
 }
 
@@ -166,10 +169,6 @@ h1,
   background-color: #f6f6f6;
   padding-top: 50px;
   padding-bottom: 50px;
-}
-.contact-div li {
-  font-family: 'Lato', sans-serif;
-  font-size: 1.125em;
 }
 
 .contact-div a {
@@ -183,6 +182,11 @@ h1,
   color: grey;
 }
 
+.footer-name {
+  display: inline;
+  margin-right: calc(100% - 190px);
+}
+
 .footer-name,
 .footer-nav {
   display: inline-block;
@@ -191,14 +195,7 @@ h1,
   margin-top: 10px;
 }
 
-.footer-name {
-  margin-top: 0;
-  text-align: left;
-  margin-right: calc(100% - 190px);
-}
-
 .secondary-nav {
-  /*visibility: hidden;*/
   display: none;
 }
 
@@ -214,15 +211,9 @@ header {
   padding-top: 40px;
 }
 
-nav {
-  max-width: 50%;
-  margin-left: 25%;
-  margin-right: 25%;
-}
-
 nav a {
   background-color: #f6f6f6;
-  /*text-align: center;*/
+  text-align: center;
   padding: 5px;
   color: black;
   font-size: 1.125em;
@@ -234,9 +225,17 @@ nav a:hover {
 }
 
 nav li {
-  /*display: inline-block;
-  padding: 0 15px;*/
+  display: inline-block;
+  padding: 0 15px;
   background-color: #f6f6f6;
+}
+
+nav {
+  margin-bottom: 50px;
+}
+
+h2 {
+  font-size: 1.1875em;
 }
 
 /****** 768px MEDIA QUERY - CLASS LAYOUT ******/
@@ -245,34 +244,32 @@ nav li {
   padding-bottom: 50px;
 }
 
-.main-nav {
-  margin-bottom: 50px;
-  flex-direction: row;
-  justify-content: space-between;
-  align-self: center;
-}
-
 .profile-image {
-  max-width: 100%;
+  width: 100%;
   margin: 0;
 }
 
 .profile-pic {
   float: right;
   width: 40%;
-  margin-right: 25px;
+  margin-right: 5%;
+  padding-left: 15px;
 }
 
 .profile-para {
   width: calc(100vw - 40% - 50px);
   text-align: left;
-  font-size: 1.4em;
-  margin: 0 25px;
+  margin: 0 0 0 5%;
+  padding-right: 10px;
 }
 
 .profile-para p {
   margin-top: -10px;
   margin-right: 15px;
+}
+
+.f-size {
+  font-size: 1.4em;
 }
 
 .image {
@@ -302,23 +299,26 @@ nav li {
 
 .process-div {
   clear: both;
-  text-align: center;
 }
 
 .process-div li {
   list-style: none;
   text-align: center;
+  line-height: 1.5em;
+}
+
+.process-div ul {
+  padding-left: 0;
 }
 
 .contact-div p {
-  width: 60%;
-  margin-left: 20%;
-  margin-right: 20%;
+  width: 75%;
+  margin-left: 12.5%;
+  margin-right: 12.5%;
 }
 
 .footer-name {
-  margin-right: calc(100% - 375px);
-  font-size: 12px;
+  margin-right: calc(100% - 415px);
 }
 
 .back {
@@ -329,7 +329,12 @@ nav li {
   display: inline-block;
   margin-left: 10px;
   margin-right: 10px;
-  font-size: 12px;
+}
+
+.footer-name,
+.secondary-nav {
+  font-size: 14px;
+  margin-bottom: 50px;
 }
 
 /****** 768px MEDIA QUERY - CLEARFIX ******/
@@ -339,5 +344,99 @@ nav li {
   display: table;
   clear: both;
 }
+
+}
+
+/***********************************
+          1024px MEDIA QUERY
+************************************/
+
+@media (min-width: 1024px) {
+
+  header {
+    width: 95%;
+    text-align: left;
+    margin-left: 5%;
+    margin-right: 0;
+  }
+
+  h1 {
+    font-size: 1.5em;
+    margin-right: calc(100% - 5% - 530px);
+  }
+
+  nav {
+    font-size: .8em;
+    margin: 0 0 30px 0;
+  }
+
+  h1,
+  nav {
+    display: inline-block;
+  }
+
+  .profile-pic {
+    width: 35%;
+    padding-left: 1%;
+  }
+
+  .portfolio-div {
+    width: 95%;
+    margin-left: 2.5%;
+    margin-right: 2.55%;
+  }
+
+  .image {
+    max-width: 100%;
+  }
+
+  .left,
+  .right {
+    width: 30%;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
+  }
+
+  .left img,
+  .right img {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .middle {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .portfolio-div p {
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 1.05em;
+  }
+
+  .folio-left {
+    margin-left: 3.5%;
+  }
+
+  .folio-clear {
+    clear: left;
+  }
+
+  .process-div {
+    width: 95%;
+    margin-left: 2.5%;
+    margin-right: 2.5%;
+  }
+
+  .contact-div p {
+    width: 58%;
+    margin-left: 21%;
+    margin-right: 21%;
+  }
+
+  .footer-name,
+  .secondary-nav {
+    margin-bottom: 0;
+  }
 
 }
